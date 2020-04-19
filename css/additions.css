@@ -1,0 +1,37 @@
+#additions {
+  padding-top: 1%;
+  width: 80%;
+  display: flex;
+  text-align: center;
+}
+
+#preview {
+  float: left;
+  width: 600px;
+  height: 450px;
+  margin-left: 10%;
+  box-shadow: 10px 10px rgba(72, 126, 176, 1);
+}
+
+#events {
+  width: 44%;
+  height: 450px;
+  padding-left: 3%;
+}
+#events td {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: xx-large;
+  border: 10px solid rgba(53, 59, 72, 1);
+}
+
+#event1 {
+  background-color: rgba(232, 65, 24, 1);
+}
+#event2 {
+  background-color: rgba(194, 54, 22, 1);
+}
+#event3 {
+  background-color: rgb(166, 45, 20, 1);
+}

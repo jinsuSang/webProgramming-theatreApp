@@ -1,0 +1,37 @@
+#movie {
+  text-align: center;
+  background-color: rgba(220, 221, 225, 0.8);
+  padding-top: 1%;
+  width: 80%;
+  margin: 1% auto;
+  border-radius: 2%;
+}
+
+.movieBtn {
+  border: 0;
+  outline: 0;
+  background-color: rgba(220, 221, 225, 0.2);
+  font-weight: bolder;
+  font-size: large;
+  margin: 0 auto;
+}
+
+#movieShow {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.movies {
+  width: 400px;
+  height: 450px;
+  float: left;
+  text-align: center;
+  margin: 2%;
+  box-shadow: 10px 10px rgba(53, 59, 72, 1);
+}
+
+#movie img {
+  width: 100%;
+  height: 100%;
+}

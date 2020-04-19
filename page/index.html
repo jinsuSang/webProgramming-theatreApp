@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/header.css" />
+    <link rel="stylesheet" type="text/css" href="../css/navigator.css" />
+    <link rel="stylesheet" type="text/css" href="../css/movie.css" />
+    <link rel="stylesheet" type="text/css" href="../css/additions.css">
+    <style>
+      a {
+        text-decoration: none;
+        color: rgba(47, 54, 64,1.0);
+      }
+      body {
+        background-color: rgba(220, 221, 225,1.0);
+      }
+      footer{
+        border-top: 2px solid rgba(53, 59, 72, 1);
+        margin-top: 5%;
+        
+      }
+      footer div{
+        margin: auto;
+        text-align: center;
+        font-size: small;
+        font-weight: lighter;
+      }
+
+    </style>
+
+    <title>theater</title>
+  </head>
+  <body>
+    <header>
+      <a href="">My page</a>
+      <a href="">로그인</a>
+      <a href="">회원가입</a>
+    </header>
+    <div id="navigator">
+      <div>
+        <a href="">예매</a>
+        <a href="">영화</a>
+        <a href="">극장</a>
+      </div>
+    </div>
+    <div id="movie">
+      <div>
+        <button class="movieBtn">현재상영작</button>
+        <button class="movieBtn">개봉예정작</button>
+      </div>
+      <div id="movieShow">
+        <div class="movies">
+          <img src="../image/nineteen_seventeen_ver2.jpg" />
+        </div>
+        <div class="movies"><img src="../image/joker_ver3_xlg.jpg" /></div>
+        <div class="movies"><img src="../image/lady_bird_ver2.jpg" /></div>
+      </div>
+    </div>
+    <div id="addtions">
+      <div >
+        <embed id="preview"
+          src="https://www.youtube.com/embed/ZIQbJemUedU?autoplay=1"
+          frameborder="0"
+          height="450"
+          width="600"
+        ></embed>
+      </div>
+      <div >
+        <table id="events">
+          <tbody>
+            <tr><td id="event1"><a href="https://www.naver.com/">골든 글로브 수상작 기획전</a></td></tr>
+            <tr><td id="event2">인천 e음 카드 가맹점 할인혜택</td></tr>
+            <tr><td id="event3">휴가중 군인/의경/사회복무요원 50% 할인</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer>
+      <div>
+        위치: 인천광역시 남동구 만수동 50번길 56
+      </div>
+      <div>
+        대표: 상진수
+      </div>
+      <div>
+        전화번호: 032-0000-0000
+      </div>
+      <div>
+        사업자등록번호 333-99-00999
+      </div>
+    </footer>
+  </body>
+</html>
