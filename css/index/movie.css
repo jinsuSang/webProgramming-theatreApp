@@ -14,6 +14,7 @@
   font-weight: bolder;
   font-size: large;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 #movieShow {
@@ -29,6 +30,7 @@
   text-align: center;
   margin: 2%;
   box-shadow: 10px 10px rgba(53, 59, 72, 1);
+  cursor: pointer;
 }
 
 #movie img {

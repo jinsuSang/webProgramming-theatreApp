@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/index/header.css" />
+    <link rel="stylesheet" href="../css/index/navigator.css" />
+    <link rel="stylesheet" href="../css/index/footer.css" />
+
+    <style>
+      a {
+        text-decoration: none;
+        color: rgba(47, 54, 64, 1);
+      }
+      body {
+        background-color: rgba(220, 221, 225, 1);
+      }
+      #movie {
+        text-align: center;
+        background-color: rgba(220, 221, 225, 0.8);
+        padding-top: 1%;
+        padding-bottom: 3%;
+        width: 80%;
+        height: 300px;
+        margin: 1% auto;
+      }
+
+      .movieBtn {
+        border: 0;
+        outline: 0;
+        background-color: rgba(220, 221, 225, 0.2);
+        font-weight: bolder;
+        font-size: small;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+
+      #movieShow {
+        display: flex;
+        margin: 0 auto;
+        width: 50%;
+      }
+
+      .movies {
+        width: 200px;
+        height: 250px;
+        float: left;
+        text-align: center;
+        margin: 2%;
+        box-shadow: 10px 10px rgba(53, 59, 72, 1);
+        transition: all 0.5s;
+        cursor: pointer;
+      }
+
+      .movies:hover {
+        width: 240px;
+        height: 300px;
+        box-shadow: 13px 13px 15px rgba(47, 54, 64, 1);
+      }
+
+      #movie img {
+        width: 100%;
+        height: 100%;
+      }
+
+      #movieScript {
+        text-align: center;
+        background-color: rgba(220, 221, 225, 0.8);
+        padding: 1%;
+        width: 70%;
+        margin: 1% auto;
+        display: flex;
+        background-color: rgba(245, 246, 250, 1);
+        border-radius: 10px;
+      }
+
+      #scriptImg {
+        width: 400px;
+        height: 500px;
+        border: 4px solid rgba(156, 136, 255, 1);
+      }
+      #scriptImg img {
+        width: 100%;
+        height: 100%;
+      }
+
+      #script {
+        background-color: rgba(53, 59, 72, 1);
+        text-align: left;
+        color: rgba(245, 246, 250, 1);
+        padding: 2%;
+        margin-left: 2%;
+        width: 70%;
+      }
+
+      #script #title {
+        font-size: xxx-large;
+        font-weight: bold;
+      }
+
+      #script #grade {
+        padding-top: 5%;
+        font-size: large;
+      }
+
+      #script p {
+        font-size: large;
+        word-break: keep-all;
+      }
+
+      #script button {
+        border: 0;
+        outline: 0;
+        background-color: rgba(232, 65, 24, 1);
+        font-weight: bolder;
+        font-size: xx-large;
+        box-shadow: 10px 10px rgba(194, 54, 22, 1);
+        float: right;
+        margin: 5%;
+        cursor: pointer;
+      }
+    </style>
+    <title>theater</title>
+  </head>
+  <body>
+    <header>
+      <a href="">My page</a>
+      <a href="">로그인</a>
+      <a href="">회원가입</a>
+    </header>
+    <div id="navigator">
+      <div>
+        <a href="">예매</a>
+        <a href="">영화</a>
+        <a href="">극장</a>
+      </div>
+    </div>
+
+    <div id="movie">
+      <div>
+        <button class="movieBtn">현재상영작</button>
+        <button class="movieBtn">개봉예정작</button>
+      </div>
+      <div id="movieShow">
+        <div class="movies">
+          <img
+            onclick="location.href='movie_1917_script.html'"
+            src="../image/nineteen_seventeen_ver2.jpg"
+          />
+        </div>
+        <div class="movies">
+          <img
+            onclick="location.href='index.html'"
+            src="../image/joker_ver3_xlg.jpg"
+          />
+        </div>
+        <div class="movies">
+          <img
+            onclick="location.href='index.html'"
+            src="../image/lady_bird_ver2.jpg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="movieScript">
+      <div id="scriptImg">
+        <img src="../image/nineteen_seventeen_ver2.jpg" />
+      </div>
+      <div id="script">
+        <div id="title">1917</div>
+        <div id="grade">평점 9.1/10.0</div>
+        <p>
+          제1차 세계대전이 한창인 1917년. 독일군에 의해 모든 통신망이 파괴된
+          상황 속에서 영국군 병사 '스코필드'(조지 맥케이)와 '블레이크'(딘-찰스
+          채프먼)에게 하나의 미션이 주어졌다. <br />함정에 빠진 영국군 부대의
+          수장 '매켄지' 중령(베네딕트 컴버배치)에게 '에린무어' 장군(콜린 퍼스)의
+          공격 중지 명령을 전하는 것! 둘은 1600명의 아군과 '블레이크'의
+          형(리차드 매든)을 구하기 위해 전쟁터 한복판을 가로지르며 사투를
+          이어가는데...
+        </p>
+        <button>예매하기</button>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        위치: 인천광역시 남동구 만수동 50번길 56
+      </div>
+      <div>
+        대표: 상진수
+      </div>
+      <div>
+        전화번호: 032-0000-0000
+      </div>
+      <div>
+        사업자등록번호 333-99-00999
+      </div>
+    </footer>
+  </body>
+</html>

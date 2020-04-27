@@ -24,6 +24,7 @@
   font-weight: bolder;
   font-size: xx-large;
   border: 10px solid rgba(53, 59, 72, 1);
+  cursor: pointer;
 }
 
 #event1 {
