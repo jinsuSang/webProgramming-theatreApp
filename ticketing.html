@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/index/header.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index/navigator.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index/footer.css" />
+    <style>
+      a {
+        text-decoration: none;
+        color: rgba(47, 54, 64, 1);
+      }
+      body {
+        background-color: rgba(220, 221, 225, 1);
+      }
+
+      #selectMovie {
+        padding-top: 1%;
+        width: 80%;
+        display: flex;
+        text-align: center;
+        margin-left: 10%;
+      }
+
+      #movie {
+        background-color: rgba(220, 221, 225, 0.8);
+        margin: 1% auto;
+      }
+      #movieShow {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      .movies {
+        width: 160px;
+        height: 200px;
+        margin: 2%;
+      }
+
+      #movie img {
+        width: 100%;
+        height: 100%;
+      }
+
+      #ticketForm {
+        padding-top: 1%;
+        width: 70%;
+        text-align: left;
+        font-weight: bold;
+        font-size: large;
+      }
+      .theater {
+        width: 70%;
+        height: 50%;
+        border: 3px solid black;
+      }
+      .theater-screen {
+        width: 60%;
+        border: 3px solid black;
+        text-align: center;
+        color: black;
+        padding: 10px;
+        margin: 10px auto;
+      }
+      #ticketForm fieldset {
+        border: 3px solid black;
+        margin-top: 1%;
+        width: 67%;
+        text-align: center;
+      }
+      #ticketForm input {
+        width: 10px;
+        height: 10px;
+      }
+    </style>
+
+    <title>theater</title>
+  </head>
+  <body>
+    <header>
+      <a href="">My page</a>
+      <a href="">로그인</a>
+      <a href="">회원가입</a>
+    </header>
+    <div id="navigator">
+      <div>
+        <a href="">예매</a>
+        <a href="">영화</a>
+        <a href="">극장</a>
+      </div>
+    </div>
+    <div id="selectMovie">
+      <div id="movie">
+        <div id="movieShow">
+          <div class="movies">
+            <label for="nineteen_seventeen">
+              <img src="../../image/nineteen_seventeen.jpg" />
+            </label>
+          </div>
+          <div class="movies">
+            <label for="joker"><img src="../../image/joker.jpg" /></label>
+          </div>
+          <div class="movies">
+            <label for="lady_bird">
+              <img src="../../image/lady_bird.jpg" />
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <form action="" method="post" id="ticketForm">
+        <div class="theater">
+          <div class="theater-screen">스크린</div>
+        </div>
+        <fieldset>
+          <legend>영화 선택</legend>
+          <label for="nineteen_seventeen">1917</label>
+          <input type="radio" name="selectMovie" id="nineteen_seventeen" />
+          <label for="joker">JOKER</label>
+          <input type="radio" name="selectMovie" id="joker" />
+          <label for="lady_bird">Lady Bird</label>
+          <input type="radio" name="selectMovie" id="lady_bird" />
+        </fieldset>
+        <fieldset id="ticketTime">
+          <legend>예매 시간</legend>
+          <label for="morning">05:00 ~ 08:00</label>
+          <input type="radio" name="ticketTime" id="morning" />
+          <label for="first">08:15 ~ 11:15</label>
+          <input type="radio" name="ticketTime" id="first" />
+          <label for="second">11:30 ~ 14:30</label>
+          <input type="radio" name="ticketTime" id="second" />
+          <br />
+          <label for="third">14:45 ~ 17:45</label>
+          <input type="radio" name="ticketTime" id="third" />
+          <label for="fourth">18:00 ~ 21:00</label>
+          <input type="radio" name="ticketTime" id="fourth" />
+          <label for="fifth">21:15 ~ 24:15</label>
+          <input type="radio" name="ticketTime" id="fifth" />
+        </fieldset>
+        <div>Notice</div>
+      </form>
+    </div>
+
+    <footer>
+      <div>
+        위치: 인천광역시 남동구 만수동 50번길 56
+      </div>
+      <div>
+        대표: 상진수
+      </div>
+      <div>
+        전화번호: 032-0000-0000
+      </div>
+      <div>
+        사업자등록번호 333-99-00999
+      </div>
+    </footer>
+  </body>
+</html>
