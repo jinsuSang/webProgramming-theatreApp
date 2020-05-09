@@ -1,0 +1,126 @@
+a {
+  text-decoration: none;
+  color: rgba(47, 54, 64, 1);
+}
+body {
+  background-color: rgba(220, 221, 225, 1);
+}
+
+#selectMovie {
+  padding-top: 1%;
+  width: 80%;
+  display: flex;
+  text-align: center;
+  margin-left: 10%;
+}
+
+#movie {
+  background-color: rgba(220, 221, 225, 0.8);
+  margin: 1% auto;
+}
+#movieShow {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.movies {
+  width: 160px;
+  height: 200px;
+  margin: 2%;
+}
+
+#movie img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#ticketForm {
+  padding-top: 1%;
+  width: 70%;
+  text-align: left;
+  font-weight: bold;
+  font-size: medium;
+  display: flex;
+}
+.theater {
+  width: 50%;
+  height: 100%;
+  border: 3px solid rgba(47, 54, 64, 1);
+  float: left;
+}
+.theater-screen {
+  width: 60%;
+  border: 3px solid rgba(53, 59, 72, 1);
+  text-align: center;
+  color: rgba(53, 59, 72, 1);
+  padding: 10px;
+  margin: 10px auto;
+}
+
+#theater-seats {
+  text-align: center;
+  width: 55%;
+  height: 80%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+#theater-seats .seats p {
+  background-color: rgba(113, 128, 147, 1);
+  color: rgba(245, 246, 250, 1);
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#theater-seats .seats input {
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+
+#selectForm {
+  margin-left: 3%;
+}
+
+#ticketForm fieldset {
+  border: 3px solid rgba(47, 54, 64, 1);
+  margin-top: 1%;
+  width: 100%;
+  text-align: center;
+}
+#ticketForm fieldset input {
+  width: 10px;
+  height: 10px;
+}
+
+#ticketForm .notice {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#ticketForm .notice p {
+  color: rgba(194, 54, 22, 1);
+}
+
+#ticketForm #charge {
+  margin-top: 3%;
+  text-align: right;
+  margin-left: 2px;
+  font-size: xx-large;
+}
+
+#ticketForm button {
+  border: 0;
+  outline: 0;
+  background-color: rgba(232, 65, 24, 1);
+  font-weight: bolder;
+  font-size: xx-large;
+  box-shadow: 10px 10px rgba(194, 54, 22, 1);
+  float: right;
+  margin: 5%;
+  cursor: pointer;
+}

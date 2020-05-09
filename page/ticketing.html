@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/index/header.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index/navigator.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index/footer.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/ticketing/ticketing.css"
+    />
+
+    <title>theater</title>
+  </head>
+  <body>
+    <header>
+      <a href="">My page</a>
+      <a href="">로그인</a>
+      <a href="">회원가입</a>
+    </header>
+    <div id="navigator">
+      <div>
+        <a href="ticketing.html">예매</a>
+        <a href="movie_script/movie_1917_script.html">영화</a>
+        <a href="">극장</a>
+      </div>
+    </div>
+    <div id="selectMovie">
+      <div id="movie">
+        <div id="movieShow">
+          <div class="movies">
+            <label for="nineteen_seventeen">
+              <img src="../../image/nineteen_seventeen.jpg" />
+            </label>
+          </div>
+          <div class="movies">
+            <label for="joker"><img src="../../image/joker.jpg" /></label>
+          </div>
+          <div class="movies">
+            <label for="lady_bird">
+              <img src="../../image/lady_bird.jpg" />
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <form action="" method="post" id="ticketForm">
+        <div class="theater">
+          <div class="theater-screen">스크린</div>
+          <table id="theater-seats">
+            <tr>
+              <td class="seats">
+                <label for="seat1"><p>1</p> </label>
+                <input type="checkbox" name="seats" id="seat1" />
+              </td>
+              <td></td>
+              <td class="seats">
+                <label for="seat2"><p>2</p> </label>
+                <input type="checkbox" name="seats" id="seat2" />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="seats">
+                <label for="seat3"><p>3</p> </label>
+                <input type="checkbox" name="seats" id="seat3" />
+              </td>
+              <td></td>
+              <td class="seats">
+                <label for="seat4"><p>4</p> </label>
+                <input type="checkbox" name="seats" id="seat4" />
+              </td>
+            </tr>
+            <tr>
+              <td class="seats">
+                <label for="seat5"><p>5</p> </label>
+                <input type="checkbox" name="seats" id="seat5" />
+              </td>
+              <td></td>
+              <td class="seats">
+                <label for="seat6"><p>6</p> </label>
+                <input type="checkbox" name="seats" id="seat6" />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="seats">
+                <label for="seat7"><p>7</p> </label>
+                <input type="checkbox" name="seats" id="seat7" />
+              </td>
+              <td></td>
+              <td class="seats">
+                <label for="seat8"><p>8</p> </label>
+                <input type="checkbox" name="seats" id="seat8" />
+              </td>
+            </tr>
+            <tr>
+              <td class="seats">
+                <label for="seat9"><p>9</p> </label>
+                <input type="checkbox" name="seats" id="seat9" />
+              </td>
+              <td></td>
+              <td class="seats">
+                <label for="seat10"><p>10</p> </label>
+                <input type="checkbox" name="seats" id="seat10" />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="seats">
+                <label for="seat11"><p>11</p> </label>
+                <input type="checkbox" name="seats" id="seat11" />
+              </td>
+              <td></td>
+              <td class="seats">
+                <label for="seat12"><p>12</p> </label>
+                <input type="checkbox" name="seats" id="seat12" />
+              </td>
+            </tr>
+            <tr>
+              <td class="seats">
+                <label for="seat13"><p>13</p> </label>
+                <input type="checkbox" name="seats" id="seat13" />
+              </td>
+              <td></td>
+              <td class="seats">
+                <label for="seat14"><p>14</p> </label>
+                <input type="checkbox" name="seats" id="seat14" />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="seats">
+                <label for="seat15"><p>15</p> </label>
+                <input type="checkbox" name="seats" id="seat15" />
+              </td>
+              <td></td>
+              <td class="seats">
+                <label for="seat16"><p>16</p> </label>
+                <input type="checkbox" name="seats" id="seat16" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="selectForm">
+          <fieldset>
+            <legend>영화 선택</legend>
+            <label for="nineteen_seventeen">1917</label>
+            <input type="radio" name="selectMovie" id="nineteen_seventeen" />
+            <label for="joker">JOKER</label>
+            <input type="radio" name="selectMovie" id="joker" />
+            <label for="lady_bird">Lady Bird</label>
+            <input type="radio" name="selectMovie" id="lady_bird" />
+          </fieldset>
+          <fieldset id="ticketTime">
+            <legend>예매 시간</legend>
+            <label for="morning">08:00 ~ 10:30</label>
+            <input type="radio" name="ticketTime" id="morning" /><br />
+            <label for="first">10:45 ~ 13:15</label>
+            <input type="radio" name="ticketTime" id="first" /><br />
+            <label for="second">13:30 ~ 16:00</label>
+            <input type="radio" name="ticketTime" id="second" /><br />
+            <label for="third">16:15 ~ 18:45</label>
+            <input type="radio" name="ticketTime" id="third" /><br />
+            <label for="fourth">19:00 ~ 21:30</label>
+            <input type="radio" name="ticketTime" id="fourth" /><br />
+            <label for="fifth">21:45 ~ 24:15</label>
+            <input type="radio" name="ticketTime" id="fifth" /><br />
+            <label for="sixth">24:30 ~ 3:00</label>
+            <input type="radio" name="ticketTime" id="sixth" />
+          </fieldset>
+          <div class="notice">
+            Notice
+            <p>
+              첫번째 영화는 20% 조조할인입니다. <br />
+              군인/의경/사회복무요원 할인은 <br />
+              현장 예매입니다.
+            </p>
+          </div>
+          <fieldset>
+            <legend>인원</legend>
+            <label for="adult">일반</label>
+            <select name="adult" id="adult" size="1">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="student">청소년</label>
+            <select name="student" id="student" size="1"
+              ><option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="preferential">우대</label>
+            <select name="preferential" id="preferential" size="1">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </fieldset>
+          <div id="charge">
+            요금 표시
+          </div>
+          <button type="submit">예매하기</button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <div>
+        위치: 인천광역시 남동구 만수동 50번길 56
+      </div>
+      <div>
+        대표: 상진수
+      </div>
+      <div>
+        전화번호: 032-0000-0000
+      </div>
+      <div>
+        사업자등록번호 333-99-00999
+      </div>
+    </footer>
+  </body>
+</html>
