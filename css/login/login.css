@@ -1,0 +1,35 @@
+#loginBox form {
+  border: 3px solid rgba(53, 59, 72, 1);
+  width: 30%;
+  text-align: center;
+  margin: 5% auto;
+  padding: 2% 3%;
+}
+
+#loginBox .formHeader {
+  font-size: large;
+  font-weight: bold;
+}
+
+#loginBox input {
+  width: 60%;
+  padding: 12px 12px;
+  margin: 8px auto;
+  display: flex;
+  border: 1px solid rgba(53, 59, 72, 1);
+  border-radius: 4px;
+}
+#loginBox button {
+  background-color: rgba(47, 54, 64, 1);
+  color: rgba(220, 221, 225, 1);
+  font-weight: bold;
+  padding: 14px 20px;
+  margin: 8px auto;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  font-size: small;
+}
+#loginBox button:hover {
+  opacity: 0.8;
+}

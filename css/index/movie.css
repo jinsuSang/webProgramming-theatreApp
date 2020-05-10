@@ -16,6 +16,9 @@
   margin: 0 auto;
   cursor: pointer;
 }
+.movieBtn:hover {
+  opacity: 0.5;
+}
 
 #movieShow {
   display: flex;

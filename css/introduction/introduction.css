@@ -1,0 +1,40 @@
+a {
+  text-decoration: none;
+  color: rgba(47, 54, 64, 1);
+}
+body {
+  background-color: rgba(220, 221, 225, 1);
+}
+.introduction {
+  text-align: center;
+}
+.introduction #name {
+  font-weight: bolder;
+  font-size: xxx-large;
+}
+.introduction #summary {
+  font-weight: bold;
+  font-size: x-large;
+}
+.introduction #main {
+  font-weight: bold;
+  font-size: large;
+}
+
+.events {
+  text-align: center;
+}
+
+.event {
+  margin: 5%;
+}
+
+.event-title {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.event-main p {
+  font-weight: bold;
+  font-size: large;
+}

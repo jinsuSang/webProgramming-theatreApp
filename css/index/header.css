@@ -1,9 +1,19 @@
 header {
-  text-align: center;
-  margin-left: 65%;
   margin-top: 1%;
-  margin-right: 5%;
 }
-header a {
-  margin: 5%;
+
+header #logo {
+  font-weight: bolder;
+  font-size: xxx-large;
+  color: rgba(25, 42, 86, 1);
+  text-align: center;
+}
+
+header #logAndSign {
+  font-size: smaller;
+  font-weight: bolder;
+  text-align: right;
+}
+header #logAndSign a {
+  margin-right: 5%;
 }

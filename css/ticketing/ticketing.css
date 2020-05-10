@@ -76,6 +76,10 @@ body {
   margin: 0 auto;
 }
 
+#theater-seats .seats p:hover {
+  opacity: 0.7;
+}
+
 #theater-seats .seats input {
   display: none;
   width: 0px;
