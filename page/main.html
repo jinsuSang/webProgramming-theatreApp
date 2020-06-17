@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="../css/index/movie.css" />
     <link rel="stylesheet" type="text/css" href="../css/index/additions.css">
     <link rel="stylesheet" type="text/css" href="../css/index/footer.css">
-
     <title>Pererva</title>
   </head>
   <body>
@@ -30,24 +29,19 @@
     </div>
     <div id="movie">
       <div>
-        <button type="button" class="movieBtn" onclick="location.href='main.html'">현재상영작</button>
-        <button type="button" class="movieBtn" onclick="location.href='main2.html'">개봉예정작</button>
+        <button type="button" class="movieBtn">현재상영작</button>
+        <button type="button" class="movieBtn">개봉예정작</button>
       </div>
       <div id="movieShow">
         <div class="movies">
-          <img
-          onclick="location.href='movie_script/movie_1917_script.html'" 
-          src="../image/nineteen_seventeen.jpg"
-          />
+          <img name="moviePoster" src="../image/nineteen_seventeen.jpg"/>
         </div>
-        <div class="movies"><img 
-          onclick="location.href='movie_script/movie_joker_script.html'"
-          src="../image/joker.jpg" 
-          /></div>
-        <div class="movies"><img 
-          onclick="location.href='movie_script/movie_ladybird_script.html'"
-          src="../image/lady_bird.jpg"
-           /></div>
+        <div class="movies">
+          <img name="moviePoster"src="../image/joker.jpg"/>
+        </div>
+        <div class="movies">
+          <img name="moviePoster" src="../image/lady_bird.jpg"/>
+        </div>
       </div>
     </div>
     <div id="addtions">
@@ -60,9 +54,9 @@
       <div >
         <table id="events">
           <tbody>
-            <tr><td id="event1" onclick="location.href='Introduction.html'">골든 글로브 수상작 기획전</td></tr>
-            <tr><td id="event2" onclick="location.href='Introduction.html'">인천 e음 카드 가맹점 할인혜택</td></tr>
-            <tr><td id="event3" onclick="location.href='Introduction.html'">휴가중 군인/의경/사회복무요원<br> 반값 할인</td></tr>
+            <tr><td id="event1" name='event'>골든 글로브 수상작 기획전</td></tr>
+            <tr><td id="event2" name='event'>인천 e음 카드 가맹점 할인혜택</td></tr>
+            <tr><td id="event3" name='event'>휴가중 군인/의경/사회복무요원<br> 반값 할인</td></tr>
           </tbody>
         </table>
       </div>
@@ -82,4 +76,46 @@
       </div>
     </footer>
   </body>
+  <script type="text/javascript">
+    function presentMovies() {
+      let moviePosters = document.getElementsByName('moviePoster');
+      moviePosters[0].src = "../image/nineteen_seventeen.jpg"
+      moviePosters[1].src = "../image/joker.jpg"
+      moviePosters[2].src = "../image/lady_bird.jpg"
+      moviePosters[0].onclick = function() {
+        location.href='movie_script/movie_1917_script.html'
+      } 
+      moviePosters[1].onclick = function() {
+        location.href='movie_script/movie_joker_script.html'
+      } 
+      moviePosters[2].onclick = function() {
+        location.href='movie_script/movie_ladybird_script.html'
+      } 
+    }
+    function previewMovies() {
+      let moviePosters = document.getElementsByName('moviePoster');
+      moviePosters[0].src = "../image/la_la_land.jpg"
+      moviePosters[1].src = "../image/greatest_showman.jpg"
+      moviePosters[2].src = "../image/les_miserables.jpg"
+      moviePosters[0].onclick = function() {
+        location.href='movie_script/movie_lalaland_script.html'
+      } 
+      moviePosters[1].onclick = function() {
+        location.href='movie_script/movie_greatestShowman_script.html'
+      } 
+      moviePosters[2].onclick = function() {
+        location.href='movie_script/movie_lesMiserables_script.html'
+      }
+    }
+    function goIntroduction(){
+      location.href='Introduction.html'
+    }
+
+    const movieBtn = document.getElementsByClassName('movieBtn') 
+    movieBtn[0].onclick = presentMovies
+    movieBtn[1].onclick = previewMovies
+    
+    const events = document.getElementsByName('event')
+    events.forEach(event => event.onclick = goIntroduction)
+  </script>
 </html>

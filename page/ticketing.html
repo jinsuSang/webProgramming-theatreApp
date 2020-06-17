@@ -49,19 +49,19 @@
         </div>
       </div>
 
-      <form action="" method="post" id="ticketForm">
+      <div id="ticketForm">
         <div class="theater">
           <div class="theater-screen">스크린</div>
           <table id="theater-seats">
             <tr>
               <td class="seats">
                 <label for="seat1"><p>1</p> </label>
-                <input type="checkbox" name="seats" id="seat1" />
+                <input type="checkbox" name="seats" id="seat1" value="1" />
               </td>
               <td></td>
               <td class="seats">
                 <label for="seat2"><p>2</p> </label>
-                <input type="checkbox" name="seats" id="seat2" />
+                <input type="checkbox" name="seats" id="seat2" value="2" />
               </td>
               <td></td>
             </tr>
@@ -69,23 +69,23 @@
               <td></td>
               <td class="seats">
                 <label for="seat3"><p>3</p> </label>
-                <input type="checkbox" name="seats" id="seat3" />
+                <input type="checkbox" name="seats" id="seat3" value="3" />
               </td>
               <td></td>
               <td class="seats">
                 <label for="seat4"><p>4</p> </label>
-                <input type="checkbox" name="seats" id="seat4" />
+                <input type="checkbox" name="seats" id="seat4" value="4" />
               </td>
             </tr>
             <tr>
               <td class="seats">
                 <label for="seat5"><p>5</p> </label>
-                <input type="checkbox" name="seats" id="seat5" />
+                <input type="checkbox" name="seats" id="seat5" value="5" />
               </td>
               <td></td>
               <td class="seats">
                 <label for="seat6"><p>6</p> </label>
-                <input type="checkbox" name="seats" id="seat6" />
+                <input type="checkbox" name="seats" id="seat6" value="6" />
               </td>
               <td></td>
             </tr>
@@ -93,23 +93,23 @@
               <td></td>
               <td class="seats">
                 <label for="seat7"><p>7</p> </label>
-                <input type="checkbox" name="seats" id="seat7" />
+                <input type="checkbox" name="seats" id="seat7" value="7" />
               </td>
               <td></td>
               <td class="seats">
                 <label for="seat8"><p>8</p> </label>
-                <input type="checkbox" name="seats" id="seat8" />
+                <input type="checkbox" name="seats" id="seat8" value="8" />
               </td>
             </tr>
             <tr>
               <td class="seats">
                 <label for="seat9"><p>9</p> </label>
-                <input type="checkbox" name="seats" id="seat9" />
+                <input type="checkbox" name="seats" id="seat9" value="9" />
               </td>
               <td></td>
               <td class="seats">
                 <label for="seat10"><p>10</p> </label>
-                <input type="checkbox" name="seats" id="seat10" />
+                <input type="checkbox" name="seats" id="seat10" value="10" />
               </td>
               <td></td>
             </tr>
@@ -117,23 +117,23 @@
               <td></td>
               <td class="seats">
                 <label for="seat11"><p>11</p> </label>
-                <input type="checkbox" name="seats" id="seat11" />
+                <input type="checkbox" name="seats" id="seat11" value="11" />
               </td>
               <td></td>
               <td class="seats">
                 <label for="seat12"><p>12</p> </label>
-                <input type="checkbox" name="seats" id="seat12" />
+                <input type="checkbox" name="seats" id="seat12" value="12" />
               </td>
             </tr>
             <tr>
               <td class="seats">
                 <label for="seat13"><p>13</p> </label>
-                <input type="checkbox" name="seats" id="seat13" />
+                <input type="checkbox" name="seats" id="seat13" value="13" />
               </td>
               <td></td>
               <td class="seats">
                 <label for="seat14"><p>14</p> </label>
-                <input type="checkbox" name="seats" id="seat14" />
+                <input type="checkbox" name="seats" id="seat14" value="14" />
               </td>
               <td></td>
             </tr>
@@ -141,12 +141,12 @@
               <td></td>
               <td class="seats">
                 <label for="seat15"><p>15</p> </label>
-                <input type="checkbox" name="seats" id="seat15" />
+                <input type="checkbox" name="seats" id="seat15" value="15" />
               </td>
               <td></td>
               <td class="seats">
                 <label for="seat16"><p>16</p> </label>
-                <input type="checkbox" name="seats" id="seat16" />
+                <input type="checkbox" name="seats" id="seat16" value="16" />
               </td>
             </tr>
           </table>
@@ -155,28 +155,78 @@
           <fieldset>
             <legend>영화 선택</legend>
             <label for="nineteen_seventeen">1917</label>
-            <input type="radio" name="selectMovie" id="nineteen_seventeen" />
+            <input
+              type="radio"
+              name="selectMovie"
+              id="nineteen_seventeen"
+              value="nineteen_seventeen"
+            />
             <label for="joker">JOKER</label>
-            <input type="radio" name="selectMovie" id="joker" />
+            <input type="radio" name="selectMovie" id="joker" value="joker" />
             <label for="lady_bird">Lady Bird</label>
-            <input type="radio" name="selectMovie" id="lady_bird" />
+            <input
+              type="radio"
+              name="selectMovie"
+              id="lady_bird"
+              value="lady_bird"
+            />
+          </fieldset>
+          <fieldset id="ticketDate">
+            <legend>날짜</legend>
+            <input type="date" id="date" />
           </fieldset>
           <fieldset id="ticketTime">
             <legend>예매 시간</legend>
             <label for="morning">08:00 ~ 10:30</label>
-            <input type="radio" name="ticketTime" id="morning" /><br />
+            <input
+              type="radio"
+              name="ticketTime"
+              id="morning"
+              value="08:00~10:30"
+              onchange="payChange()"
+            /><br />
             <label for="first">10:45 ~ 13:15</label>
-            <input type="radio" name="ticketTime" id="first" /><br />
+            <input
+              type="radio"
+              name="ticketTime"
+              id="first"
+              value="10:45~13:15"
+            /><br />
             <label for="second">13:30 ~ 16:00</label>
-            <input type="radio" name="ticketTime" id="second" /><br />
+            <input
+              type="radio"
+              name="ticketTime"
+              id="second"
+              value="13:30~16:00"
+            /><br />
             <label for="third">16:15 ~ 18:45</label>
-            <input type="radio" name="ticketTime" id="third" /><br />
+            <input
+              type="radio"
+              name="ticketTime"
+              id="third"
+              value="16:15~18:45"
+            /><br />
             <label for="fourth">19:00 ~ 21:30</label>
-            <input type="radio" name="ticketTime" id="fourth" /><br />
+            <input
+              type="radio"
+              name="ticketTime"
+              id="fourth"
+              value="19:00~21:00"
+            /><br />
             <label for="fifth">21:45 ~ 24:15</label>
-            <input type="radio" name="ticketTime" id="fifth" /><br />
+            <input
+              type="radio"
+              name="ticketTime"
+              id="fifth"
+              value="21:45~24:15"
+            /><br />
             <label for="sixth">24:30 ~ 3:00</label>
-            <input type="radio" name="ticketTime" id="sixth" />
+            <input
+              type="radio"
+              name="ticketTime"
+              id="sixth"
+              value="24:30~3:00"
+            />
           </fieldset>
           <div class="notice">
             Notice
@@ -189,7 +239,7 @@
           <fieldset>
             <legend>인원</legend>
             <label for="adult">일반</label>
-            <select name="adult" id="adult" size="1">
+            <select name="adult" id="adult" size="1" onchange="payChange()">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -198,7 +248,7 @@
               <option value="5">5</option>
             </select>
             <label for="student">청소년</label>
-            <select name="student" id="student" size="1"
+            <select name="student" id="student" size="1" onchange="payChange()"
               ><option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -207,7 +257,12 @@
               <option value="5">5</option>
             </select>
             <label for="preferential">우대</label>
-            <select name="preferential" id="preferential" size="1">
+            <select
+              name="preferential"
+              id="preferential"
+              size="1"
+              onchange="payChange()"
+            >
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -217,11 +272,11 @@
             </select>
           </fieldset>
           <div id="charge">
-            요금 표시
+            0
           </div>
-          <button type="submit">예매하기</button>
+          <button type="button" onclick="ticketingMovie()">예매하기</button>
         </div>
-      </form>
+      </div>
     </div>
 
     <footer>
@@ -239,4 +294,98 @@
       </div>
     </footer>
   </body>
+  <script type="text/javascript">
+    function ticketingMovie() {
+      let movieName = "";
+      let movieDate = "";
+      let movieTime = "";
+      let adult = 0;
+      let student = 0;
+      let preferential = 0;
+      let movieSeats = [];
+
+      const selectMovies = document.getElementsByName("selectMovie");
+      const selectSeats = document.getElementsByName("seats");
+      const selectDate = document.getElementById("date");
+      const selectTime = document.getElementsByName("ticketTime");
+      const numAdult = document.getElementById("adult");
+      const numStudent = document.getElementById("student");
+      const numPreferential = document.getElementById("preferential");
+
+      for (let i = 0; i < selectMovies.length; i++) {
+        if (selectMovies[i].checked) {
+          movieName = selectMovies[i].value;
+        }
+      }
+
+      for (let i = 0; i < selectSeats.length; i++) {
+        if (selectSeats[i].checked) {
+          movieSeats = movieSeats.concat(selectSeats[i].value);
+        }
+      }
+
+      for (let i = 0; i < movieTime.length; i++) {
+        if (selectTime[i].checked) {
+          movieTime = movieTime[i].value;
+        }
+      }
+      movieDate = selectDate.value;
+      adult = numAdult.options[numAdult.selectedIndex].value;
+      student = numStudent.options[numStudent.selectedIndex].value;
+      preferential =
+        numPreferential.options[numPreferential.selectedIndex].value;
+      console.log(
+        movieName,
+        movieDate,
+        movieSeats,
+        movieTime,
+        adult,
+        student,
+        preferential
+      );
+      if (movieSeats.length < adult + student + preferential) {
+        return alert("좌석 수가 예매 인원보다 적습니다!");
+      }
+      if (movieSeats.length > adult + student + preferential) {
+        return alert("예매 인원이 좌석 수보다 적습니다!");
+      }
+    }
+
+    function payChange() {
+      const numAdult = document.getElementById("adult");
+      const numStudent = document.getElementById("student");
+      const numPreferential = document.getElementById("preferential");
+      adult = numAdult.options[numAdult.selectedIndex].value;
+      student = numStudent.options[numStudent.selectedIndex].value;
+      preferential =
+        numPreferential.options[numPreferential.selectedIndex].value;
+      let payment = document.getElementById("charge");
+      let total =
+        parseInt(adult) * 15000 +
+        parseInt(student) * 10000 +
+        parseInt(preferential) * 7500;
+      if (document.getElementsByName("ticketTime")[0].checked) {
+        total *= 0.8;
+      }
+      payment.innerText = total;
+    }
+
+    const tdate = document.getElementById("date");
+    let current = new Date();
+    let date = current.getDate();
+    let month = current.getMonth() + 1;
+    let year = current.getFullYear();
+    if (date < 10) {
+      date = "0" + date;
+    }
+    if (month < 10) {
+      month = "0" + month;
+    }
+
+    current = year + "-" + month + "-" + date;
+    exp = "2020" + "-" + "07" + "-" + "30";
+    tdate.value = current;
+    tdate.min = current;
+    tdate.max = exp;
+  </script>
 </html>

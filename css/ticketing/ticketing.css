@@ -96,10 +96,6 @@ body {
   width: 100%;
   text-align: center;
 }
-#ticketForm fieldset input {
-  width: 10px;
-  height: 10px;
-}
 
 #ticketForm .notice {
   margin-top: 5%;
