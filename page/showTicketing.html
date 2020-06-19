@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/index/header.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index/navigator.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index/footer.css" />
+    <style>
+      a {
+        text-decoration: none;
+        color: rgba(47, 54, 64, 1);
+      }
+      body {
+        background-color: rgba(220, 221, 225, 1);
+      }
+      #ticketList {
+        text-align: center;
+      }
+      #title {
+        font-weight: bolder;
+        font-size: larger;
+      }
+      #tList {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .ticket {
+        list-style: none;
+      }
+
+      .detail {
+        list-style: none;
+      }
+    </style>
+    <title>Pererva</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="main.html">Pererva</a>
+      </div>
+      <div id="logAndSign">
+        <a href="login.html">로그인</a>
+        <a href="signin.html">회원가입</a>
+      </div>
+    </header>
+    <div id="navigator">
+      <div>
+        <a href="ticketing.html">예매</a>
+        <a href="movie_script/movie_1917_script.html">영화</a>
+        <a href="Introduction.html">극장</a>
+      </div>
+    </div>
+
+    <div id="ticketList">
+      <p id="title">예매 내역</p>
+      <ul id="tList"></ul>
+    </div>
+
+    <footer>
+      <div>
+        위치: 인천광역시 남동구 만수동 50번길 56
+      </div>
+      <div>
+        대표: 상진수
+      </div>
+      <div>
+        전화번호: 032-0000-0000
+      </div>
+      <div>
+        사업자등록번호 333-99-00999
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript">
+    let tList = document.getElementById("tList");
+    let localStorage = window.localStorage;
+    let ticketingList = JSON.parse(localStorage.getItem("ticketingList"));
+    function showList() {
+      if (!localStorage) {
+        return alert("로컬스토리지를 지원하지 않습니다!");
+      } else if (localStorage.length === 0) {
+        return alert("예매내역이 없습니다!");
+      }
+      for (i = 0; i < ticketingList.length; i++) {
+        let ticket = document.createElement("li");
+        let content = document.createElement("span");
+        let deleteBtn = document.createElement("button");
+        let detailBtn = document.createElement("button");
+        deleteBtn.onclick = deleteList;
+        detailBtn.onclick = showDetail;
+        deleteBtn.innerText = "취소";
+        detailBtn.innerText = "상세내역";
+        const { movieName, movieDate, movieSeats, movieTime } = ticketingList[
+          i
+        ];
+        let text = `예매내역 ${movieName} 시간 ${movieDate} ${movieTime} ${movieSeats.length}석  `;
+        content.innerText = text;
+        ticket.id = i;
+        ticket.className = "ticket";
+        ticket.appendChild(content);
+        ticket.appendChild(detailBtn);
+        ticket.appendChild(deleteBtn);
+        tList.appendChild(ticket);
+      }
+    }
+    function deleteList() {
+      let checkpoint = confirm("예매를 취소하시겠습니까?");
+      if (checkpoint) {
+        let ticket = this.parentNode;
+        ticketingList.splice(ticket.id, 1);
+        localStorage.setItem("ticketingList", JSON.stringify(ticketingList));
+        while (tList.hasChildNodes()) tList.removeChild(tList.firstChild);
+        showList();
+      }
+    }
+    function showDetail() {
+      let ticket = this.parentNode;
+      let index = ticket.id;
+      if (ticket.childNodes.length < 4) {
+        let ul = document.createElement("ul");
+        let li = document.createElement("li");
+        let content = document.createElement("span");
+        const {
+          movieSeats,
+          adult,
+          student,
+          preferential,
+          payment,
+        } = ticketingList[index];
+        let text = "";
+        movieSeats.forEach((seat) => {
+          text += seat + "번 ";
+        });
+        text += `좌석, 어른 ${adult}명 학생 ${student}명 우대 ${preferential}명 ${payment}원`;
+        content.innerText = text;
+        ul.className = "detail";
+        li.appendChild(content);
+        ul.appendChild(li);
+        ticket.appendChild(ul);
+      } else {
+        ticket.childNodes[3].remove();
+      }
+    }
+    showList();
+  </script>
+</html>
