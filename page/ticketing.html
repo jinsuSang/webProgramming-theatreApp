@@ -35,15 +35,15 @@
         <div id="movieShow">
           <div class="movies">
             <label for="nineteen_seventeen">
-              <img src="../../image/nineteen_seventeen.jpg" />
+              <img src="../image/nineteen_seventeen.jpg" />
             </label>
           </div>
           <div class="movies">
-            <label for="joker"><img src="../../image/joker.jpg" /></label>
+            <label for="joker"><img src="../image/joker.jpg" /></label>
           </div>
           <div class="movies">
             <label for="lady_bird">
-              <img src="../../image/lady_bird.jpg" />
+              <img src="../image/lady_bird.jpg" />
             </label>
           </div>
         </div>
@@ -244,7 +244,6 @@
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
-              <option value="5">5</option>
             </select>
             <label for="student">청소년</label>
             <select name="student" id="student" size="1"
@@ -253,7 +252,6 @@
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
-              <option value="5">5</option>
             </select>
             <label for="preferential">우대</label>
             <select name="preferential" id="preferential" size="1">
@@ -262,7 +260,6 @@
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
-              <option value="5">5</option>
             </select>
           </fieldset>
           <div id="charge">
@@ -345,11 +342,14 @@
       if (movieName === "") {
         return alert("영화를 선택하세요!");
       }
-      if (!movieSeats) {
+      if (movieSeats.length == 0) {
         return alert("좌석을 선택하세요!");
       }
       if (movieTime === "") {
         return alert("상영 시간을 선택하세요!");
+      }
+      if (adult + student + preferential > 4) {
+        return alert("최대 4명 예매가 가능합니다!");
       }
       if (movieSeats.length < adult + student + preferential) {
         return alert("좌석 수가 예매 인원보다 적습니다!");
@@ -398,7 +398,7 @@
       let confirmResult = confirm(
         `${movieName}
         ${movieDate}, ${movieTime},
-        ${movieSeats.length}석 어른: ${adult}명, 학생: ${student}명, 우대: ${preferential}
+        ${movieSeats.length}석 일반: ${adult}명, 학생: ${student}명, 우대: ${preferential}
         금액: ${payment}원을 예매하시겠습니까?`
       );
       if (confirmResult) {

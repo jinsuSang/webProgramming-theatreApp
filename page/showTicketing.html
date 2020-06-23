@@ -5,34 +5,11 @@
     <link rel="stylesheet" type="text/css" href="../css/index/header.css" />
     <link rel="stylesheet" type="text/css" href="../css/index/navigator.css" />
     <link rel="stylesheet" type="text/css" href="../css/index/footer.css" />
-    <style>
-      a {
-        text-decoration: none;
-        color: rgba(47, 54, 64, 1);
-      }
-      body {
-        background-color: rgba(220, 221, 225, 1);
-      }
-      #ticketList {
-        text-align: center;
-      }
-      #title {
-        font-weight: bolder;
-        font-size: larger;
-      }
-      #tList {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .ticket {
-        list-style: none;
-      }
-
-      .detail {
-        list-style: none;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/showTicket/showTicket.css"
+    />
     <title>Pererva</title>
   </head>
   <body>
@@ -95,10 +72,12 @@
         const { movieName, movieDate, movieSeats, movieTime } = ticketingList[
           i
         ];
-        let text = `예매내역 ${movieName} 시간 ${movieDate} ${movieTime} ${movieSeats.length}석  `;
+        let text = `${movieName} 시간 ${movieDate} ${movieTime} ${movieSeats.length}석  `;
         content.innerText = text;
         ticket.id = i;
         ticket.className = "ticket";
+        deleteBtn.className = "btn";
+        detailBtn.className = "btn";
         ticket.appendChild(content);
         ticket.appendChild(detailBtn);
         ticket.appendChild(deleteBtn);
@@ -133,7 +112,7 @@
         movieSeats.forEach((seat) => {
           text += seat + "번 ";
         });
-        text += `좌석, 어른 ${adult}명 학생 ${student}명 우대 ${preferential}명 ${payment}원`;
+        text += `좌석, 일반 ${adult}명 학생 ${student}명 우대 ${preferential}명 ${payment}원`;
         content.innerText = text;
         ul.className = "detail";
         li.appendChild(content);

@@ -1,0 +1,56 @@
+a {
+  text-decoration: none;
+  color: rgba(47, 54, 64, 1);
+}
+body {
+  background-color: rgba(220, 221, 225, 1);
+}
+#ticketList {
+  text-align: center;
+}
+#title {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+#tList {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.ticket {
+  list-style: none;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: large;
+  font-weight: bolder;
+  color: rgba(220, 221, 225, 1);
+  background-color: rgba(72, 126, 176, 1);
+  padding: 2%;
+  border-radius: 40px 80px;
+}
+
+.btn {
+  margin-left: 2%;
+  border: none;
+  font-size: large;
+  background-color: rgba(64, 115, 158, 1);
+  border-radius: 40px;
+  color: rgba(245, 246, 250, 1);
+}
+
+.detail {
+  list-style: none;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: medium;
+  font-weight: bold;
+  color: rgba(220, 221, 225, 1);
+  text-align: center;
+  background-color: rgba(39, 60, 117, 1);
+  padding: 2%;
+  border-radius: 40px 80px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
